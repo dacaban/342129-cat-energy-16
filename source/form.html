@@ -6,7 +6,7 @@
 </head>
 <body>
   <header class="page-header">
-    <a href="index.html" class="logo page-header__logo" title="Перейти на главную">
+    <a class="logo page-header__logo" href="index.html" title="Перейти на главную">
       <img class="logo__icon" src="" width="" height="" alt="Cat Energy">
       <img class="logo__title" src="" width="" height="" alt="Cat Energy">
     </a>
@@ -27,11 +27,95 @@
   </header>
 
   <main class="page-main">
-
+    <h1 class="title page-main__title">Подбор программы</h1>
+    <form class="application-form" action="https://echo.htmlacademy.ru" method="post">
+      <p class="application-form__tooltip">
+        Заполните анкету, и мы подберем программу для вашего кота
+      </p>
+      <fieldset class="application-form__cats-data">
+        <legend class="visually-hidden">Основные данные</legend>
+        <div class="application-form__form-item">
+          <label class="application-form__key" for="name">Имя:<sup>*</sup></label>
+          <input class="application-form__value" type="text" name="name" id="name" placeholder="Барсик" required>
+        </div>
+        <div class="application-form__form-item">
+          <label class="application-form__key" for="weight">Вес (кг):<sup>*</sup></label>
+          <input class="application-form__value" type="text" name="weight" id="weight" placeholder="7" required>
+        </div>
+        <div class="application-form__form-item">
+          <label class="application-form__key" for="age">Возраст (лет):</label>
+          <input class="application-form__value" type="text" name="age" id="age" placeholder="7">
+        </div>
+      </fieldset>
+      <fieldset class="application-form__purpose">
+        <legend class="visually-hidden">Цель</legend>
+        <ul class="application-form__list">
+          <li class="application-form__form-item">
+            <input class="application-form__value" type="radio" name="purpose" id="slim" value="slim" checked>
+            <label class="application-form__key" for="slim">Похудение</label>
+          </li>
+          <li class="application-form__form-item">
+            <input class="application-form__value" type="radio" name="purpose" id="pro" value="pro">
+            <label class="application-form__key" for="pro">Набор массы</label>
+          </li>
+          <li class="application-form__form-item">
+            <input class="application-form__value" type="radio" name="purpose" id="need-advice" value="need-advice">
+            <label class="application-form__key" for="need-advice">Не знаю (нужен ваш совет)</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="application-form__section">
+        <legend class="title application-form__title">Контактные данные (владельца кота)</legend>
+        <div class="application-form__form-item">
+          <label class="application-form__key" for="e-mail">E-mail:<sup>*</sup></label>
+          <input class="application-form__value" type="email" name="e-mail" id="e-mail" placeholder="kuklachev@gmail.com" required>
+        </div>
+        <div class="application-form__form-item">
+          <label class="application-form__key" for="phone">Телефон:<sup>*</sup></label>
+          <input class="application-form__value" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
+        </div>
+      </fieldset>
+      <fieldset class="application-form__section">
+        <legend class="title application-form__title">Комментарий</legend>
+        <textarea id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+      </fieldset>
+      <fieldset class="application-form__section">
+        <legend class="title application-form__title">Дополнительно</legend>
+        <ul class="application-form__list">
+          <li class="application-form__form-item">
+            <input class="application-form__value" type="checkbox" name="additional" id="sweetener" value="sweetener" checked>
+            <label class="application-form__key" for="sweetener">Подсластитель</label>
+          </li>
+          <li class="application-form__form-item">
+            <input class="application-form__value" type="checkbox" name="additional" id="water" value="water">
+            <label class="application-form__key" for="water">Питьевая вода</label>
+          </li>
+          <li class="application-form__form-item">
+            <input class="application-form__value" type="checkbox" name="additional" id="milk" value="milk">
+            <label class="application-form__key" for="milk">Молоко</label>
+          </li>
+          <li class="application-form__form-item">
+            <input class="application-form__value" type="checkbox" name="additional" id="vitamins" value="vitamins">
+            <label class="application-form__key" for="vitamins">Витамины</label>
+          </li>
+        </ul>
+      </fieldset>
+      <button class="button application-form__button" type="submit">Отправить заявку</button>
+      <small class="application-form__legend">
+        <sup>*</sup> — Обязательные поля
+      </small>
+    </form>
   </main>
 
   <footer class="page-footer">
-    <a href="index.html" class="logo page-footer__logo" title="Перейти на главную">
+    <section class="contacts page-footer__contacts">
+      <h2 class="visually-hidden">Наши контакты</h2>
+      <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
+      <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 <br>
+        Санкт-Петербург</p>
+      <img class="contacts__map" src="" width="" height="" alt="Как к нам добраться">
+    </section>
+    <a class="logo page-footer__logo" href="index.html" title="Перейти на главную">
       <img class="logo__title" src="" width="" height="" alt="Cat Energy">
     </a>
     <ul class="social page-footer__social">
