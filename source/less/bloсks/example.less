@@ -1,0 +1,67 @@
+.example {
+  .wrapper();
+  background-color: @contentBackground;
+  padding-bottom: 35px;
+}
+
+.example__title {
+  margin-bottom: 10px;
+}
+
+.example__history {
+  margin: 0;
+  font-family: @textFont;
+  font-size: @textFontSize;
+  line-height: @textLineHeight;
+}
+
+.example__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 45px;
+}
+
+.example__item {
+  border: solid @borderColor 1px;
+  margin: 25px 0;
+  text-align: center;
+
+  &--cost {
+    border: none;
+  }
+}
+
+.example__name {
+  margin: 0;
+  font-family: @textFont;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 400;
+  text-transform: lowercase;
+
+  &--cost {
+    font-family: @baseFont;
+    text-transform: uppercase;
+    font-size: @textFontSize;
+    line-height: 20px;
+  }
+}
+
+.example__value {
+  margin: 12px 0;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  &--cost {
+    margin: 0;
+    font-size: @textFontSize;
+    line-height: 20px;
+  }
+}
+
+.example__wrapper {
+  margin-bottom: 25px;
+  margin-left: -20px;
+}

@@ -2,14 +2,15 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Cat Energy</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
     <header class="page-header">
       <a class="logo page-header__logo" title="Перейти на главную">
-        <img class="logo__icon" src="" width="" height="" alt="Cat Energy">
-        <img class="logo__title" src="" width="" height="" alt="Cat Energy">
+        <img class="logo__icon" src="img/logo-mobile.svg" width="190" height="39" alt="Cat Energy">
       </a>
       <nav class="main-menu">
         <button class="main-menu__toggle" type="button">Открыть меню</button>
@@ -28,8 +29,11 @@
     </header>
     <main class="page-main">
       <div class="promo">
-        <h1 class="title promo__title">Функциональное питание для котов</h1>
-        <p class="promo__slogan">Занялся собой? Займись котом!</p>
+        <div class="promo__wrapper">
+          <h1 class="title promo__title">Функциональное питание для котов</h1>
+          <p class="promo__slogan">Занялся собой? Займись котом!</p>
+        </div>
+        <img class="promo__img" src="img/index-can-mobile@1x.png" width="280" height="271" alt="Функциональное питание для котов">
         <a class="button promo__button" href="form.html" title="Подобрать программу">Подобрать программу</a>
       </div>
       <section class="categories">
@@ -96,38 +100,44 @@
           </li>
         </ul>
         <div class="example__wrapper">
-          <img class="example__image" src="" width="" height="" alt="Толстый Борис">
-          <img class="example__image" src="" width="" height="" alt="Худой Борис">
+          <img class="example__image" src="img/before-mobile@1x.png" width="320" height="240" alt="Толстый Борис">
+          <img class="example__image" src="img/after-mobile@1x.png" width="320" height="240" alt="Худой Борис">
         </div>
-        <span class="example__before">Было</span>
-        <input class="example__range" type="range">
-        <span class="example__after">Стало</span>
+        <div class="example__range-wrapper">
+          <span class="example__before">Было</span>
+          <input class="example__range" type="range">
+          <span class="example__after">Стало</span>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
       <section class="contacts page-footer__contacts">
-        <h2 class="visually-hidden">Наши контакты</h2>
-        <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
-        <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 <br>
-          Санкт-Петербург</p>
-        <img class="contacts__map" src="" width="" height="" alt="Как к нам добраться">
+        <div class="contacts__text">
+          <h2 class="visually-hidden">Наши контакты</h2>
+          <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
+          <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <br>
+            Санкт-Петербург</p>
+        </div>
+        <img class="contacts__map" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Как к нам добраться">
       </section>
-      <a class="logo page-footer__logo" title="Перейти на главную">
-        <img class="logo__title" src="" width="" height="" alt="Cat Energy">
-      </a>
-      <ul class="social page-footer__social">
-        <li class="social__item">
-          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
-        </li>
-      </ul>
-      <div class="page-footer__copyright">
-        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <div class="page-footer__background">
+        <a class="logo page-footer__logo" title="Перейти на главную">
+          <img class="logo__title" src="img/logo-footer.svg" width="128" height="26" alt="Cat Energy">
+        </a>
+        <ul class="social page-footer__social">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+          </li>
+        </ul>
+        <div class="page-footer__copyright">
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        </div>
       </div>
     </footer>
 
