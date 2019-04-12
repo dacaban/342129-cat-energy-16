@@ -1,5 +1,6 @@
 .categories {
-  .wrapper();
+  width: 280px;
+  margin: 0 auto;
 }
 
 .categories__list {
@@ -35,4 +36,31 @@
   color: @titleColor;
   text-transform: uppercase;
   line-height: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .categories {
+    width: 708px;
+  }
+
+  .categories__item {
+    padding-right: 270px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .categories {
+    width: 1220px;
+  }
+
+  .categories__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .categories__item {
+    box-sizing: border-box;
+    width: 570px;
+    padding: 41px 52px;
+  }
 }

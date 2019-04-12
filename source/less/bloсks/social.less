@@ -1,6 +1,8 @@
 .social {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
-  padding: 0;
+  padding: 20px 73px;
   border-bottom: solid 1px @borderColor;
   border-top: solid 1px @borderColor;
 }
@@ -15,4 +17,13 @@
   width: 22px;
   height: 19px;
   border: solid 1px @baseBackground;
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    width: 146px;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
 }

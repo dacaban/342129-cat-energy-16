@@ -1,10 +1,10 @@
 .application-form {
-  padding-bottom: 34px;
+  margin-bottom: 34px;
 }
 
 .application-form__tooltip {
   margin: 0 0 38px;
-  .wrapper();
+  .wrapper(20px);
   font-size: @textFontSize;
   line-height: @textLineHeight;
   text-transform: uppercase;
@@ -13,10 +13,9 @@
 
 .application-form__cats-data {
   margin: 0;
-  .wrapper();
-  padding-bottom: 9px;
+  .wrapper(20px);
+  margin-bottom: 9px;
   border: none;
-  border-bottom: solid 1px @contentBorderColor;
 }
 
 .application-form__item {
@@ -46,12 +45,13 @@
 }
 
 .application-form__purpose {
-  .wrapper();
+  .wrapper(20px);
   padding-top: 20px;
   padding-bottom: 7px;
   margin: 0;
   border: none;
   border-bottom: solid 1px @contentBorderColor;
+  border-top: solid 1px @contentBorderColor;
 }
 
 .application-form__list {
@@ -61,26 +61,25 @@
 }
 
 .application-form__section {
-  padding: 0;
-  padding-right: 20px;
-  padding-top: 34px;
+  padding: 0 20px;
   margin: 0;
-  margin-left: 20px;
   margin-top: 31px;
   border: none;
-  border-top: 3px solid @baseBackground;
 }
 
 .application-form__title {
-  display: inline-block;
-  vertical-align: middle;
-  padding-inline-end: 24px;
-  max-width: 211px;
-  box-sizing: border-box;
+  float: left;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.application-form__wrapper-button {
+  .wrapper(20px);
 }
 
 .application-form__button {
-  margin: 20px 20px 23px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .application-form__legend {
@@ -89,4 +88,112 @@
   line-height: 16px;
   display: block;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .application-form {
+    margin-bottom: 72px;
+  }
+
+  .application-form__tooltip {
+    .wrapper(70px);
+    max-width: 347px;
+  }
+
+  .application-form__wrapper {
+    .wrapper(70px);
+  }
+
+  .application-form__section--contacts .application-form__wrapper {
+    padding: 0;
+  }
+
+  .application-form__purpose {
+    border: solid 1px @contentBorderColor;
+  }
+
+  .application-form__section {
+    .wrapper(70px);
+  }
+
+  .application-form__section--extra .application-form__list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .application-form__section--extra .application-form__item {
+    width: 284px;
+  }
+
+  .application-form__wrapper-button {
+    .wrapper(70px);
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .application-form__button {
+    width: 284px;
+    margin: 0;
+  }
+
+  .application-form__legend {
+    width: 284px;
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .application-form__tooltip {
+    .wrapper(110px);
+  }
+
+  .application-form__wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    .wrapper(110px);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .application-form__cats-data {
+    width: 570px;
+    padding: 0;
+  }
+
+  .application-form__purpose {
+    box-sizing: border-box;
+    width: 570px;
+    margin: 0;
+  }
+
+  .application-form__section {
+    .wrapper(110px);
+  }
+
+  .application-form__section .application-form__wrapper {
+    padding: 0;
+  }
+
+  .application-form__section--contacts .application-form__item {
+    width: 570px;
+  }
+
+  .application-form__section--extra .application-form__item {
+    width: 245px;
+  }
+
+  .application-form__wrapper-button {
+    .wrapper(110px);
+  }
+
+  .application-form__button {
+    width: 570px;
+  }
+
+  .application-form__legend {
+    width: 570px;
+  }
 }

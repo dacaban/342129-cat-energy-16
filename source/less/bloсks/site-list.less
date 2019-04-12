@@ -22,3 +22,15 @@
 .site-list__link {
   color: @titleColor;
 }
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+    width: 460px;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  width: 500px;
+}

@@ -33,54 +33,58 @@
         <p class="application-form__tooltip">
           Заполните анкету, и мы подберем программу для вашего кота
         </p>
-        <fieldset class="application-form__cats-data">
-          <legend class="visually-hidden">Основные данные</legend>
-          <div class="application-form__item">
-            <label class="application-form__key" for="name">Имя:*</label>
-            <input class="application-form__value" type="text" name="name" id="name" placeholder="Барсик" required>
-          </div>
-          <div class="application-form__item">
-            <label class="application-form__key" for="weight">Вес (кг):*</label>
-            <input class="application-form__value" type="text" name="weight" id="weight" placeholder="7" required>
-          </div>
-          <div class="application-form__item">
-            <label class="application-form__key" for="age">Возраст (лет):</label>
-            <input class="application-form__value" type="text" name="age" id="age" placeholder="7">
-          </div>
-        </fieldset>
-        <fieldset class="application-form__purpose">
-          <legend class="visually-hidden">Цель</legend>
-          <ul class="application-form__list">
-            <li class="application-form__item">
-              <input class="application-form__value" type="radio" name="purpose" id="slim" value="slim" checked>
-              <label class="application-form__key" for="slim">Похудение</label>
-            </li>
-            <li class="application-form__item">
-              <input class="application-form__value" type="radio" name="purpose" id="pro" value="pro">
-              <label class="application-form__key" for="pro">Набор массы</label>
-            </li>
-            <li class="application-form__item">
-              <input class="application-form__value" type="radio" name="purpose" id="need-advice" value="need-advice">
-              <label class="application-form__key" for="need-advice">Не знаю (нужен ваш совет)</label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="application-form__section">
+        <div class="application-form__wrapper">
+          <fieldset class="application-form__cats-data">
+            <legend class="visually-hidden">Основные данные</legend>
+            <div class="application-form__item">
+              <label class="application-form__key" for="name">Имя:*</label>
+              <input class="application-form__value" type="text" name="name" id="name" placeholder="Барсик" required>
+            </div>
+            <div class="application-form__item">
+              <label class="application-form__key" for="weight">Вес (кг):*</label>
+              <input class="application-form__value" type="text" name="weight" id="weight" placeholder="7" required>
+            </div>
+            <div class="application-form__item">
+              <label class="application-form__key" for="age">Возраст (лет):</label>
+              <input class="application-form__value" type="text" name="age" id="age" placeholder="7">
+            </div>
+          </fieldset>
+          <fieldset class="application-form__purpose">
+            <legend class="visually-hidden">Цель</legend>
+            <ul class="application-form__list">
+              <li class="application-form__item">
+                <input class="application-form__value" type="radio" name="purpose" id="slim" value="slim" checked>
+                <label class="application-form__key" for="slim">Похудение</label>
+              </li>
+              <li class="application-form__item">
+                <input class="application-form__value" type="radio" name="purpose" id="pro" value="pro">
+                <label class="application-form__key" for="pro">Набор массы</label>
+              </li>
+              <li class="application-form__item">
+                <input class="application-form__value" type="radio" name="purpose" id="need-advice" value="need-advice">
+                <label class="application-form__key" for="need-advice">Не знаю (нужен ваш совет)</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <fieldset class="application-form__section application-form__section--contacts">
           <legend class="title title--small application-form__title">Контактные данные (владельца кота)</legend>
-          <div class="application-form__item">
-            <label class="application-form__key" for="e-mail">E-mail:*</label>
-            <input class="application-form__value" type="email" name="e-mail" id="e-mail" placeholder="kuklachev@gmail.com" required>
-          </div>
-          <div class="application-form__item">
-            <label class="application-form__key" for="phone">Телефон:*</label>
-            <input class="application-form__value" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
+          <div class="application-form__wrapper">
+            <div class="application-form__item">
+              <label class="application-form__key" for="e-mail">E-mail:*</label>
+              <input class="application-form__value" type="email" name="e-mail" id="e-mail" placeholder="kuklachev@gmail.com" required>
+            </div>
+            <div class="application-form__item">
+              <label class="application-form__key" for="phone">Телефон:*</label>
+              <input class="application-form__value" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
+            </div>
           </div>
         </fieldset>
         <fieldset class="application-form__section">
           <legend class="title title--small application-form__title">Комментарий</legend>
           <textarea class="application-form__value" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
-        <fieldset class="application-form__section">
+        <fieldset class="application-form__section application-form__section--extra">
           <legend class="title title--small application-form__title">Дополнительно</legend>
           <ul class="application-form__list">
             <li class="application-form__item">
@@ -101,10 +105,12 @@
             </li>
           </ul>
         </fieldset>
-        <button class="button application-form__button" type="submit">Отправить заявку</button>
-        <small class="application-form__legend">
-          <sup>*</sup> — Обязательные поля
-        </small>
+        <div class="application-form__wrapper-button">
+          <button class="button application-form__button" type="submit">Отправить заявку</button>
+          <small class="application-form__legend">
+            <sup>*</sup> — Обязательные поля
+          </small>
+        </div>
       </form>
     </main>
 
