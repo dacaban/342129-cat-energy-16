@@ -14,13 +14,11 @@
 }
 
 .page-footer__background {
-  .wrapper(20px);
   width: 320px;
   margin: 0 auto;
   box-sizing: border-box;
   background-color: @contentBackground;
-  padding-top: 40px;
-  padding-bottom: 28px;
+  padding: 40px 20px 28px;
   text-align: center;
 }
 
@@ -41,18 +39,16 @@
   color: @baseTextColor;
 }
 
-@media (min-width: @tablet-width) {
+@media (min-width: @tabletWidth) {
   .page-footer__contacts {
     width: 768px;
   }
 
   .page-footer__background {
-    .wrapper(30px);
     width: 768px;
     display: flex;
     justify-content: space-between;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 60px 30px;
   }
 
   .page-footer__logo {
@@ -64,15 +60,13 @@
   }
 }
 
-@media (min-width: @desktop-width) {
+@media (min-width: @desktopWidth) {
   .page-footer__contacts {
     width: 1440px;
   }
 
   .page-footer__background {
-    .wrapper(110px);
     width: 1440px;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 60px 110px;
   }
 }

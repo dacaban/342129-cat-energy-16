@@ -34,7 +34,7 @@
           Заполните анкету, и мы подберем программу для вашего кота
         </p>
         <div class="application-form__wrapper">
-          <fieldset class="application-form__cats-data">
+          <fieldset class="application-form__section application-form__section--cats-data">
             <legend class="visually-hidden">Основные данные</legend>
             <div class="application-form__item">
               <label class="application-form__key" for="name">Имя:*</label>
@@ -49,7 +49,7 @@
               <input class="application-form__value" type="text" name="age" id="age" placeholder="7">
             </div>
           </fieldset>
-          <fieldset class="application-form__purpose">
+          <fieldset class="application-form__section application-form__section--purpose">
             <legend class="visually-hidden">Цель</legend>
             <ul class="application-form__list">
               <li class="application-form__item">
@@ -80,7 +80,7 @@
             </div>
           </div>
         </fieldset>
-        <fieldset class="application-form__section">
+        <fieldset class="application-form__section application-form__section--comments">
           <legend class="title title--small application-form__title">Комментарий</legend>
           <textarea class="application-form__value" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>

@@ -1,6 +1,5 @@
 .example {
   box-sizing: border-box;
-  .wrapper(20px);
   width: 320px;
   margin: 0 auto;
   background-color: @contentBackground;
@@ -8,11 +7,13 @@
 }
 
 .example__title {
+  padding: 0 20px;
   margin-bottom: 10px;
 }
 
 .example__history {
   margin: 0;
+  padding: 0 20px;
   font-family: @textFont;
   font-size: @textFontSize;
   line-height: @textLineHeight;
@@ -20,7 +21,7 @@
 
 .example__list {
   list-style: none;
-  padding: 0;
+  padding: 0 20px;
   margin: 0 0 45px;
 }
 
@@ -66,13 +67,16 @@
 
 .example__wrapper {
   margin-bottom: 25px;
-  margin-left: -20px;
 }
 
-@media (min-width: @tablet-width) {
+.example__range-wrapper {
+  padding: 0 20px;
+}
+
+@media (min-width: @tabletWidth) {
   .example {
-    .wrapper(30px);
-    width: @tablet-width;
+    padding: 0 30px;
+    width: @tabletWidth;
   }
 
   .example__list {
@@ -91,10 +95,10 @@
   }
 }
 
-@media (min-width: @desktop-width) {
+@media (min-width: @desktopWidth) {
   .example {
-    .wrapper(110px);
-    width: @desktop-width;
+    padding: 0 110px;
+    width: @desktopWidth;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;

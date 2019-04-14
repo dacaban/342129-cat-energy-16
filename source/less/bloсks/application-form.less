@@ -4,18 +4,29 @@
 
 .application-form__tooltip {
   margin: 0 0 38px;
-  .wrapper(20px);
+  padding: 0 20px;
   font-size: @textFontSize;
   line-height: @textLineHeight;
   text-transform: uppercase;
   color: @titleColor;
 }
 
-.application-form__cats-data {
+.application-form__section {
+  padding: 0 20px;
   margin: 0;
-  .wrapper(20px);
-  margin-bottom: 9px;
+  margin-top: 31px;
   border: none;
+
+  &--cats-data {
+    margin-bottom: 9px;
+  }
+
+  &--purpose {
+    padding-bottom: 7px;
+    padding-top: 20px;
+    border-bottom: solid 1px @contentBorderColor;
+    border-top: solid 1px @contentBorderColor;
+  }
 }
 
 .application-form__item {
@@ -44,27 +55,10 @@
   text-transform: uppercase;
 }
 
-.application-form__purpose {
-  .wrapper(20px);
-  padding-top: 20px;
-  padding-bottom: 7px;
-  margin: 0;
-  border: none;
-  border-bottom: solid 1px @contentBorderColor;
-  border-top: solid 1px @contentBorderColor;
-}
-
 .application-form__list {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.application-form__section {
-  padding: 0 20px;
-  margin: 0;
-  margin-top: 31px;
-  border: none;
 }
 
 .application-form__title {
@@ -74,7 +68,7 @@
 }
 
 .application-form__wrapper-button {
-  .wrapper(20px);
+  padding: 0 20px;
 }
 
 .application-form__button {
@@ -90,30 +84,31 @@
   text-align: center;
 }
 
-@media (min-width: @tablet-width) {
+@media (min-width: @tabletWidth) {
   .application-form {
     margin-bottom: 72px;
   }
 
   .application-form__tooltip {
-    .wrapper(70px);
+    padding: 0 70px;
     max-width: 347px;
   }
 
   .application-form__wrapper {
-    .wrapper(70px);
+    padding: 0 70px;
+  }
+
+  .application-form__section {
+    padding: 0 70px;
+
+    &--purpose {
+      padding: 27px 27px 13px;
+      border: solid 1px @contentBorderColor;
+    }
   }
 
   .application-form__section--contacts .application-form__wrapper {
     padding: 0;
-  }
-
-  .application-form__purpose {
-    border: solid 1px @contentBorderColor;
-  }
-
-  .application-form__section {
-    .wrapper(70px);
   }
 
   .application-form__section--extra .application-form__list {
@@ -128,7 +123,7 @@
   }
 
   .application-form__wrapper-button {
-    .wrapper(70px);
+    padding: 0 70px;
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
@@ -145,32 +140,33 @@
   }
 }
 
-@media (min-width: @desktop-width) {
+@media (min-width: @desktopWidth) {
   .application-form__tooltip {
-    .wrapper(110px);
+    padding: 0 110px;
   }
 
   .application-form__wrapper {
     width: 100%;
     box-sizing: border-box;
-    .wrapper(110px);
+    padding: 0 110px;
     display: flex;
     justify-content: space-between;
   }
 
-  .application-form__cats-data {
-    width: 570px;
-    padding: 0;
-  }
-
-  .application-form__purpose {
-    box-sizing: border-box;
-    width: 570px;
-    margin: 0;
-  }
-
   .application-form__section {
-    .wrapper(110px);
+    padding: 0 110px;
+
+    &--cats-data {
+      width: 570px;
+      padding: 0;
+    }
+
+    &--purpose {
+      padding: 30px 28px 0;
+      box-sizing: border-box;
+      width: 570px;
+      margin: 0;
+    }
   }
 
   .application-form__section .application-form__wrapper {
@@ -186,7 +182,7 @@
   }
 
   .application-form__wrapper-button {
-    .wrapper(110px);
+    padding: 0 110px;
   }
 
   .application-form__button {
