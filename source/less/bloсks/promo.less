@@ -1,13 +1,15 @@
 .promo {
   text-align: center;
   position: relative;
+  width: 320px;
+  margin: 0 auto;
 }
 
 .promo__wrapper {
   box-sizing: border-box;
   padding: 20px 20px 0;
   height: 305px;
-  background-image: url("../../img/index-background-mobile@1x.jpg");
+  background-image: url("../img/index-background-mobile@1x.jpg");
   background-position: 50% 0;
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -29,12 +31,51 @@
 }
 
 .promo__img {
-  @imgWidth: 280px;
-  position: absolute;
+  .position-center();
   top: 165px;
-  left: calc(50% - @imgWidth / 2);
 }
 
 .promo__button {
   margin: 135px 20px 0;
+}
+
+@media (min-width: @tabletWidth) {
+  .promo {
+    width: 487px;
+    text-align: left;
+    min-height: 400px;
+  }
+
+  .promo__wrapper {
+    padding: 0;
+    background: none;
+    color: @titleColor;
+    height: auto;
+    width: 427px;
+  }
+
+  .promo__title {
+    color: @titleColor;
+  }
+
+  .promo__button {
+    margin: 50px 0 0;
+    display: inline-block;
+  }
+}
+
+@media (min-width: @desktopWidth) {
+  .promo {
+    width: 1220px;
+    padding-left: 80px;
+    box-sizing: border-box;
+  }
+
+  .promo__wrapper {
+    width: 415px;
+  }
+
+  .promo__img {
+    top: 0;
+  }
 }
