@@ -16,3 +16,27 @@
     color: @baseTextColor;
   }
 }
+
+.button:hover {
+  background-color: @baseBackgroundHvr;
+}
+
+.button--gray:hover {
+  background-color: @grayBackgroundHvr;
+}
+
+.button:active {
+  color: @textOnBackgroundColorActive;
+}
+
+.button--gray:active {
+  color: @baseTextColorActive;
+}
+
+@media (min-width: @tabletWidth) {
+  .button {
+    padding: 16px 27px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
