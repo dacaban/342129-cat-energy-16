@@ -2,8 +2,11 @@
   max-width: 1440px;
   margin: 0 auto;
   background-color: @contentBackground;
-  padding-bottom: 35px;
   padding-top: 17px;
+}
+
+.example__inner {
+  padding-bottom: 35px;
 }
 
 .example__title {
@@ -110,6 +113,10 @@
     background-color: transparent;
   }
 
+  .example__inner {
+    padding-bottom: 0;
+  }
+
   .example__title {
     margin-bottom: 60px;
   }
@@ -196,8 +203,15 @@
 @media (min-width: @desktopWidth) {
   .example {
     padding-bottom: 0;
+  }
+
+  .example__container {
+    background-color: @contentBackground;
+  }
+
+  .example__inner {
+    .wrapper();
     display: flex;
-    flex-wrap: wrap;
   }
 
   .example__title {
@@ -208,17 +222,17 @@
   .example__content {
     padding: 72px 0;
     width: 46%;
-    background-color: @contentBackground;
   }
 
   .example__history {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     width: 83.61204%;
   }
 
   .example__list {
-    padding-top: 48px;
+    padding: 48px 0 0;
     margin: 0;
     box-sizing: border-box;
     width: 83.61204%;
@@ -242,5 +256,9 @@
 
   .example__name:not(.example__name--cost) {
     background-color: @contentBackground;
+  }
+
+  .example__range-wrapper {
+    padding: 0;
   }
 }

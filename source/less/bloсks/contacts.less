@@ -96,10 +96,14 @@
 
 @media (min-width: @desktopWidth) {
   .contacts {
-    max-width: 1440px;
-    margin: 0 auto;
     position: relative;
     padding: 0;
+  }
+
+  .contacts__inner {
+    .position-center();
+    z-index: 1;
+    width: 1300px;
   }
 
   .contacts__text {
@@ -127,8 +131,7 @@
     margin-top: 0;
 
     &::before {
-      top: 150px;
-      left: 944px;
+      display: none;
     }
   }
 
