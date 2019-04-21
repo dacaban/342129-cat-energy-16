@@ -83,25 +83,31 @@
 
 @media (min-width: @tabletWidth) {
   .additional-goods {
-    position: relative;
     margin-bottom: 76px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 22px;
-      height: 3px;
-      width: 100%;
-      background-color: @baseBackground;
-      z-index: -1;
-    }
   }
 
   .additional-goods__title {
+    position: relative;
     padding: 0 38px;
     display: inline-block;
-    background-color: @textOnBackgroundColor;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 100vw;
+      height: 3px;
+      background-color: @baseBackground;
+    }
+
+    &::before {
+      right: 100%;
+    }
+
+    &::after {
+      left: 100%;
+    }
   }
 
   .additional-goods__list {
@@ -179,7 +185,7 @@
 
   .additional-goods__list {
     margin-bottom: 0;
-    width: 73.36066%;
+    width: 73.37%;
   }
 
   .additional-goods__item {
@@ -191,18 +197,18 @@
   }
 
   .additional-goods__info {
-    width: 68.15642%;
+    width: 68.15%;
     margin-bottom: 0;
     align-items: center;
   }
 
   .additional-goods__name {
     margin-bottom: 0;
-    width: 46.7213%;
+    width: 46.72%;
   }
 
   .additional-goods__detail {
-    width: 46.7213%;
+    width: 46.72%;
   }
 
   .additional-goods__volume {
@@ -214,12 +220,12 @@
   }
 
   .additional-goods__button {
-    width: 27.3743%;
+    width: 27.37%;
   }
 
   .additional-goods__promo {
     margin-top: 0;
-    width: 20.08197%;
+    width: 20.1%;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
     flex-direction: column;
     text-align: center;

@@ -7,7 +7,7 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
   <body>
-    <header class="page-header wrapper">
+    <header class="page-header">
       <a class="logo page-header__logo" href="index.html" title="Перейти на главную">
         <img class="logo__icon" src="img/logo-mobile.svg" width="190" height="39" alt="Cat Energy">
       </a>
@@ -30,86 +30,102 @@
     <main class="page-main">
       <h1 class="title page-main__title">Подбор программы</h1>
       <form class="application-form" action="https://echo.htmlacademy.ru" method="post">
-        <p class="application-form__tooltip">
-          Заполните анкету, и мы подберем программу для вашего кота
-        </p>
         <div class="application-form__wrapper">
-          <fieldset class="application-form__section application-form__section--cats-data">
+          <p class="application-form__tooltip">
+            Заполните анкету, и мы подберем программу питания для вашего кота
+          </p>
+        </div>
+        <div class="application-form__wrapper application-form__wrapper--outer">
+          <div class="application-form__inner">
+            <fieldset class="application-form__section application-form__section--cats-data">
             <legend class="visually-hidden">Основные данные</legend>
-            <div class="application-form__item">
-              <label class="application-form__key" for="name">Имя:*</label>
-              <input class="application-form__value" type="text" name="name" id="name" placeholder="Барсик" required>
-            </div>
-            <div class="application-form__item">
-              <label class="application-form__key" for="weight">Вес (кг):*</label>
-              <input class="application-form__value" type="text" name="weight" id="weight" placeholder="7" required>
-            </div>
-            <div class="application-form__item">
-              <label class="application-form__key" for="age">Возраст (лет):</label>
-              <input class="application-form__value" type="text" name="age" id="age" placeholder="7">
-            </div>
-          </fieldset>
-          <fieldset class="application-form__section application-form__section--purpose">
-            <legend class="visually-hidden">Цель</legend>
-            <ul class="application-form__list">
-              <li class="application-form__item">
-                <input class="application-form__value" type="radio" name="purpose" id="slim" value="slim" checked>
-                <label class="application-form__key" for="slim">Похудение</label>
-              </li>
-              <li class="application-form__item">
-                <input class="application-form__value" type="radio" name="purpose" id="pro" value="pro">
-                <label class="application-form__key" for="pro">Набор массы</label>
-              </li>
-              <li class="application-form__item">
-                <input class="application-form__value" type="radio" name="purpose" id="need-advice" value="need-advice">
-                <label class="application-form__key" for="need-advice">Не знаю (нужен ваш совет)</label>
-              </li>
-            </ul>
-          </fieldset>
+              <div class="application-form__wrapper application-form__wrapper--inner">
+                <div class="application-form__item">
+                  <label class="application-form__key" for="name">Имя:*</label>
+                  <input class="application-form__value" type="text" name="name" id="name" placeholder="Барсик" required>
+                </div>
+                <div class="application-form__item">
+                  <label class="application-form__key" for="weight">Вес (кг):*</label>
+                  <input class="application-form__value" type="text" name="weight" id="weight" placeholder="7" required>
+                </div>
+                <div class="application-form__item">
+                  <label class="application-form__key" for="age">Возраст (лет):</label>
+                  <input class="application-form__value" type="text" name="age" id="age" placeholder="7">
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="application-form__section application-form__section--purpose">
+              <legend class="visually-hidden">Цель</legend>
+              <div class="application-form__wrapper application-form__wrapper--inner">
+                <ul class="application-form__list">
+                  <li class="application-form__item">
+                    <input class="application-form__value" type="radio" name="purpose" id="slim" value="slim" checked>
+                    <label class="application-form__key" for="slim">Похудение</label>
+                  </li>
+                  <li class="application-form__item">
+                    <input class="application-form__value" type="radio" name="purpose" id="pro" value="pro">
+                    <label class="application-form__key" for="pro">Набор массы</label>
+                  </li>
+                  <li class="application-form__item">
+                    <input class="application-form__value" type="radio" name="purpose" id="need-advice" value="need-advice">
+                    <label class="application-form__key" for="need-advice">Не знаю (нужен ваш совет)</label>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+          </div>
         </div>
         <fieldset class="application-form__section application-form__section--contacts">
           <legend class="title title--small application-form__title">Контактные данные (владельца кота)</legend>
           <div class="application-form__wrapper">
-            <div class="application-form__item">
-              <label class="application-form__key" for="e-mail">E-mail:*</label>
-              <input class="application-form__value" type="email" name="e-mail" id="e-mail" placeholder="kuklachev@gmail.com" required>
-            </div>
-            <div class="application-form__item">
-              <label class="application-form__key" for="phone">Телефон:*</label>
-              <input class="application-form__value" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
+            <div class="application-form__inner">
+              <div class="application-form__item">
+                <label class="application-form__key" for="e-mail">E-mail:*</label>
+                <input class="application-form__value" type="email" name="e-mail" id="e-mail" placeholder="kuklachev@gmail.com" required>
+              </div>
+              <div class="application-form__item">
+                <label class="application-form__key" for="phone">Телефон:*</label>
+                <input class="application-form__value" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
+              </div>
             </div>
           </div>
         </fieldset>
         <fieldset class="application-form__section application-form__section--comments">
           <legend class="title title--small application-form__title">Комментарий</legend>
-          <textarea class="application-form__value" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <div class="application-form__wrapper">
+            <textarea class="application-form__value" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
         </fieldset>
         <fieldset class="application-form__section application-form__section--extra">
           <legend class="title title--small application-form__title">Дополнительно</legend>
-          <ul class="application-form__list">
-            <li class="application-form__item">
-              <input class="application-form__value" type="checkbox" name="additional" id="sweetener" value="sweetener" checked>
-              <label class="application-form__key" for="sweetener">Подсластитель</label>
-            </li>
-            <li class="application-form__item">
-              <input class="application-form__value" type="checkbox" name="additional" id="water" value="water">
-              <label class="application-form__key" for="water">Питьевая вода</label>
-            </li>
-            <li class="application-form__item">
-              <input class="application-form__value" type="checkbox" name="additional" id="milk" value="milk">
-              <label class="application-form__key" for="milk">Молоко</label>
-            </li>
-            <li class="application-form__item">
-              <input class="application-form__value" type="checkbox" name="additional" id="vitamins" value="vitamins">
-              <label class="application-form__key" for="vitamins">Витамины</label>
-            </li>
-          </ul>
+          <div class="application-form__wrapper">
+            <ul class="application-form__list">
+              <li class="application-form__item">
+                <input class="application-form__value" type="checkbox" name="additional" id="sweetener" value="sweetener" checked>
+                <label class="application-form__key" for="sweetener">Подсластитель</label>
+              </li>
+              <li class="application-form__item">
+                <input class="application-form__value" type="checkbox" name="additional" id="water" value="water">
+                <label class="application-form__key" for="water">Питьевая вода</label>
+              </li>
+              <li class="application-form__item">
+                <input class="application-form__value" type="checkbox" name="additional" id="milk" value="milk">
+                <label class="application-form__key" for="milk">Молоко</label>
+              </li>
+              <li class="application-form__item">
+                <input class="application-form__value" type="checkbox" name="additional" id="vitamins" value="vitamins">
+                <label class="application-form__key" for="vitamins">Витамины</label>
+              </li>
+            </ul>
+          </div>
         </fieldset>
-        <div class="application-form__wrapper-button">
-          <button class="button application-form__button" type="submit">Отправить заявку</button>
-          <small class="application-form__legend">
-            <sup>*</sup> — Обязательные поля
-          </small>
+        <div class="application-form__wrapper">
+          <div class="application-form__wrapper-button">
+            <button class="button application-form__button" type="submit">Отправить заявку</button>
+            <small class="application-form__legend">
+              <sup>*</sup> — Обязательные поля
+            </small>
+          </div>
         </div>
       </form>
     </main>
