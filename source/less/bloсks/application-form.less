@@ -76,9 +76,14 @@
     left: 0;
     width: 30px;
     height: 30px;
-    border: 1px solid @borderColor;
+    border: 1px solid @menuBorderColor;
     box-sizing: border-box;
   }
+}
+
+.application-form__section--purpose .application-form__value:enabled + .application-form__key:hover::before,
+.application-form__section--extra .application-form__value:enabled + .application-form__key:hover::before {
+  border-color: @borderColor;
 }
 
 .application-form__section--purpose .application-form__key {
@@ -109,7 +114,18 @@
   background-repeat: no-repeat;
 }
 
+.application-form__section--purpose .application-form__value:disabled + .application-form__key,
+.application-form__section--extra .application-form__value:disabled + .application-form__key {
+  opacity: 0.3;
+}
+
 .application-form__value {
+  font-family: @baseFont;
+  color: @baseTextColor;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  box-sizing: border-box;
   margin: 0;
   padding: 13px 15px;
   border: solid 1px @menuBorderColor;
@@ -122,6 +138,14 @@
   &[type="checkbox"] {
     display: none;
   }
+
+  &:hover {
+    border-color: @additionalGoodsBorderColor;
+  }
+
+  &:focus {
+    outline: 2px solid @baseTextColor;
+  }
 }
 
 .application-form__section--comments .application-form__value {
@@ -130,14 +154,6 @@
   width: 100%;
   min-height: 150px;
   padding-right: 12px;
-}
-
-.application-form__value:placeholder-shown {
-  font-family: @baseFont;
-  font-size: 16px;
-  line-height: 18px;
-  color: @baseTextColor;
-  text-transform: uppercase;
 }
 
 .application-form__list {
@@ -274,16 +290,13 @@
 
   .application-form__value {
     padding: 10px 19px;
+    font-size: 20px;
+    line-height: 20px;
 
     &[type="radio"],
     &[type="checkbox"] {
       margin-right: 20px;
     }
-  }
-
-  .application-form__value:placeholder-shown {
-    font-size: 20px;
-    line-height: 20px;
   }
 
   .application-form__title {
