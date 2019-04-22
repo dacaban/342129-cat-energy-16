@@ -1,28 +1,11 @@
 .page-main {
-  width: 320px;
+  max-width: 1440px;
+  overflow: hidden;
   margin: 0 auto;
 }
 
 .page-main__title {
-  padding: 21px 20px;
-}
-
-@media (min-width: @tabletWidth) {
-  .page-main {
-    width: 768px;
-  }
-
-  .page-main__title {
-    padding: 21px 30px;
-  }
-}
-
-@media (min-width: @desktopWidth) {
-  .page-main {
-    width: 1440px;
-  }
-
-  .page-main__title {
-    padding: 21px 110px;
-  }
+  .wrapper();
+  padding-top: 21px;
+  padding-bottom: 21px;
 }

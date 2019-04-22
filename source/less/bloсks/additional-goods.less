@@ -1,5 +1,6 @@
 .additional-goods {
-  padding: 0 20px 35px;
+  .wrapper();
+  padding-bottom: 35px;
 }
 
 .additional-goods__title {
@@ -21,6 +22,10 @@
   border-top: solid 1px @additionalGoodsBorderColor;
 }
 
+.additional-goods__info {
+  margin-bottom: 10px;
+}
+
 .additional-goods__name {
   font-weight: 400;
   font-size: 16px;
@@ -30,35 +35,79 @@
 }
 
 .additional-goods__detail {
-  margin-bottom: 10px;
   font-family: @textFont;
   font-size: @textFontSize;
   line-height: 14px;
   color: @baseTextColor;
 }
 
+.additional-goods__price {
+  text-transform: uppercase;
+}
+
 .additional-goods__promo {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: center;
   margin: 0;
-  padding: 0 60px 45px;
+  margin-top: 40px;
   min-height: 289px;
   box-sizing: border-box;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: cover;
-  background-color: @baseBackground;
+  background-position: 50% 0;
+  background-size: auto 100%;
+  background-color: @promoBackground;
   font-family: @textFont;
   color: @textOnBackgroundColor;
   text-align: center;
+
+  &::before {
+    content: "";
+    .position-center();
+    top: 65px;
+    width: 55px;
+    height: 60px;
+    background-image: url("../img/icon-gift.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+}
+
+.additional-goods__promo-text {
+  width: 160px;
+  margin-bottom: 43px;
 }
 
 @media (min-width: @tabletWidth) {
   .additional-goods {
-    padding: 0 30px;
     margin-bottom: 76px;
+  }
+
+  .additional-goods__title {
+    position: relative;
+    padding: 0 38px;
+    display: inline-block;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 100vw;
+      height: 3px;
+      background-color: @baseBackground;
+    }
+
+    &::before {
+      right: 100%;
+    }
+
+    &::after {
+      left: 100%;
+    }
   }
 
   .additional-goods__list {
@@ -70,30 +119,124 @@
     border-right: solid 1px @additionalGoodsBorderColor;
     padding: 24px 37px;
   }
+
+  .additional-goods__info {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .additional-goods__name {
+    font-size: 20px;
+  }
+
+  .additional-goods__detail {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .additional-goods__volume,
+  .additional-goods__price {
+    padding: 0;
+  }
+
+  .additional-goods__volume {
+    padding-right: 52px;
+  }
+
+  .additional-goods__button {
+    font-size: 16px;
+    padding: 10px 27px;
+  }
+
+  .additional-goods__promo {
+    flex-direction: row;
+    min-height: 200px;
+    text-align: left;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    background-size: cover;
+
+    &::before {
+      transform: none;
+      left: 90px;
+      top: 65px;
+    }
+  }
+
+  .additional-goods__promo-text {
+    margin-bottom: 0;
+    margin-right: 110px;
+  }
 }
 
 @media (min-width: @desktopWidth) {
   .additional-goods {
-    padding: 0 110px;
+    margin-bottom: 86px;
+    padding-bottom: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
   .additional-goods__title {
-    width: 1220px;
+    margin-bottom: 80px;
   }
 
-  .additional-goods__promo {
-    width: 245px;
-  }
 
   .additional-goods__list {
-    width: 895px;
+    margin-bottom: 0;
+    width: 73.37%;
   }
 
   .additional-goods__item {
     border-left: none;
     border-right: none;
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .additional-goods__info {
+    width: 68.15%;
+    margin-bottom: 0;
+    align-items: center;
+  }
+
+  .additional-goods__name {
+    margin-bottom: 0;
+    width: 46.72%;
+  }
+
+  .additional-goods__detail {
+    width: 46.72%;
+  }
+
+  .additional-goods__volume {
+    padding-left: 0;
+  }
+
+  .additional-goods__price {
+    text-align: right;
+  }
+
+  .additional-goods__button {
+    width: 27.37%;
+  }
+
+  .additional-goods__promo {
+    margin-top: 0;
+    width: 20.1%;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    flex-direction: column;
+    text-align: center;
+
+    &::before {
+      .position-center();
+    }
+  }
+
+  .additional-goods__promo-text {
+    margin-right: 0;
+    margin-bottom: 45px;
   }
 }

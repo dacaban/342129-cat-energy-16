@@ -3,7 +3,7 @@
 }
 
 .contacts__text {
-  padding: 0 20px;
+  .wrapper();
   display: flex;
   justify-content: space-between;
 }
@@ -13,7 +13,7 @@
   line-height: 20px;
   font-weight: 400;
   color: @titleColor;
-  width: 140px;
+  width: 45%;
 }
 
 .contacts__address {
@@ -21,25 +21,76 @@
   font-family: @textFont;
   font-size: @textFontSize;
   line-height: 20px;
-  width: 140px;
+  width: 50%;
 }
 
-.contacts__map {
-  margin-top: 25px;
+.contacts__city {
+  display: block;
+}
+
+.contacts__static-map {
+  width: 320px;
+  margin: 25px auto 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 53px;
+    top: 180px;
+    left: 140px;
+    background-image: url("../img/map-pin.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+}
+
+.contacts__map img {
+  width: 320px;
+  height: 400px;
   display: block;
 }
 
 @media (min-width: @tabletWidth) {
-  .contacts__text {
-    padding: 0 70px;
+  .contacts {
+    padding-top: 65px;
   }
 
   .contacts__title {
-    width: 165px;
+    margin-left: 40px;
+    font-size: 20px;
+    line-height: 25px;
+    width: 23.3%;
   }
 
   .contacts__address {
-    width: 165px;
+    margin-right: 40px;
+    width: 23.3%;
+    font-size: 16px;
+    text-align: right;
+  }
+
+  .contacts__city {
+    margin-top: 20px;
+  }
+
+  .contacts__static-map {
+    width: 768px;
+    margin: 60px auto 0;
+
+    &::before {
+      width: 90px;
+      height: 105px;
+      top: 146px;
+      left: 338px;
+    }
+  }
+
+  .contacts__map img {
+    width: 768px;
+    height: 396px;
   }
 }
 
@@ -49,6 +100,12 @@
     padding: 0;
   }
 
+  .contacts__inner {
+    .position-center();
+    z-index: 1;
+    width: 1300px;
+  }
+
   .contacts__text {
     background-color: @textOnBackgroundColor;
     padding: 63px 75px;
@@ -56,9 +113,30 @@
     position: absolute;
     top: 95px;
     left: 110px;
+    z-index: 1;
   }
 
-  .contacts__map {
-    margin: 0;
+  .contacts__title {
+    margin-left: 0;
+    width: 40.5%;
+  }
+
+  .contacts__address {
+    margin-right: 0;
+    width: 40.5%;
+  }
+
+  .contacts__static-map {
+    width: 100%;
+    margin-top: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .contacts__map img {
+    width: 100%;
+    height: 400px;
   }
 }

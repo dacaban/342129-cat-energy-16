@@ -1,20 +1,40 @@
 .page-header {
+  .wrapper();
   display: flex;
   flex-direction: column;
-  width: 320px;
-  margin: 0 auto;
+  padding: 10px 0 0;
+  border-bottom: 1px solid @menuBorderColor;
+}
+
+.page-header__logo {
+  margin-left: 20px;
+  margin-right: 50px;
+  margin-bottom: 13px;
 }
 
 @media (min-width: @tabletWidth) {
   .page-header {
     flex-direction: row;
     justify-content: space-between;
-    width: 708px;
+    padding-top: 24px;
+    border-bottom: none;
+  }
+
+  .page-header__logo {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
 @media (min-width: @desktopWidth) {
   .page-header {
-    width: 1220px;
+    padding-top: 54px;
+
+    &--index {
+      .position-center();
+      top: 0;
+      width: 100%;
+      box-sizing: border-box;
+    }
   }
 }

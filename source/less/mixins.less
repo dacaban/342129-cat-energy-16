@@ -1,5 +1,19 @@
-.wrapper(@value: 20px) {
-  padding: 0 @value;
+.wrapper() {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+
+  @media (min-width: @tabletWidth) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: @desktopWidth) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 .position-center() {
