@@ -112,7 +112,7 @@
     width: 570px;
     position: absolute;
     top: 95px;
-    left: 110px;
+    left: 40px;
     z-index: 1;
   }
 
@@ -129,6 +129,7 @@
   .contacts__static-map {
     width: 100%;
     margin-top: 0;
+    overflow: hidden;
 
     &::before {
       display: none;
@@ -136,7 +137,8 @@
   }
 
   .contacts__map img {
-    width: 100%;
+    width: 1440px;
     height: 400px;
+    object-fit: cover;
   }
 }
