@@ -45,6 +45,13 @@
   height: 271px;
 }
 
+@media (min-resolution: @retinaDpi), (min-resolution: @retinaDppx) {
+  .promo::after {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+    background-size: 320px 305px;
+  }
+}
+
 @media (min-width: @tabletWidth) {
   .promo {
     text-align: left;
@@ -98,7 +105,6 @@
     box-sizing: border-box;
     min-height: 747px;
     padding-top: 143px;
-    z-index: -1;
 
     &::after {
       display: block;
@@ -127,5 +133,11 @@
     height: 499px;
     top: 0;
     left: 60%;
+  }
+
+  @media (min-resolution: @retinaDpi), (min-resolution: @retinaDppx) {
+    .promo::after {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+    }
   }
 }
