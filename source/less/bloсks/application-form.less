@@ -49,10 +49,20 @@
   margin-bottom: 13px;
   display: flex;
   align-items: center;
+  position: relative;
 
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+.application-form__item--icon .application-form__value {
+  padding-right: 47px;
+}
+
+.application-form__icon {
+  position: absolute;
+  right: 13px;
 }
 
 .application-form__key {
@@ -82,7 +92,9 @@
 }
 
 .application-form__section--purpose .application-form__value:enabled + .application-form__key:hover::before,
-.application-form__section--extra .application-form__value:enabled + .application-form__key:hover::before {
+.application-form__section--extra .application-form__value:enabled + .application-form__key:hover::before,
+.application-form__section--purpose .application-form__value:focus:enabled + .application-form__key::before,
+.application-form__section--extra .application-form__value:focus:enabled + .application-form__key::before {
   border-color: @borderColor;
 }
 
@@ -114,8 +126,8 @@
   background-repeat: no-repeat;
 }
 
-.application-form__section--purpose .application-form__value:disabled + .application-form__key,
-.application-form__section--extra .application-form__value:disabled + .application-form__key {
+.application-form__section--purpose .application-form__value:active + .application-form__key,
+.application-form__section--extra .application-form__value:active + .application-form__key {
   opacity: 0.3;
 }
 
@@ -130,13 +142,12 @@
   padding: 13px 15px;
   border: solid 1px @menuBorderColor;
 
-  &:not([type="radio"]):not([type="checkbox"]) {
-    flex-grow: 1;
+  &::placeholder {
+    color: #444444;
   }
 
-  &[type="radio"],
-  &[type="checkbox"] {
-    display: none;
+  &:not([type="radio"]):not([type="checkbox"]) {
+    flex-grow: 1;
   }
 
   &:hover {
@@ -146,6 +157,18 @@
   &:focus {
     outline: 2px solid @baseTextColor;
   }
+
+  &--invalid {
+    outline: 2px solid @errorColor;
+  }
+}
+
+.application-form__value:focus + .application-form__icon {
+  fill: @baseBackground;
+}
+
+.application-form__value--invalid + .application-form__icon {
+  fill: @errorColor;
 }
 
 .application-form__section--comments .application-form__value {
@@ -253,6 +276,14 @@
     margin-bottom: 20px;
   }
 
+  .application-form__item--icon .application-form__value {
+    padding-right: 55px;
+  }
+
+  .application-form__icon {
+    right: 17px;
+  }
+
   .application-form__section--purpose .application-form__item:not(:last-child) {
     margin-bottom: 13px;
   }
@@ -319,6 +350,14 @@
   .application-form__section--extra .application-form__item {
     width: 45.3%;
     margin-bottom: 32px;
+  }
+
+  .application-form__item--icon .application-form__value {
+    padding-right: 59px;
+  }
+
+  .application-form__icon {
+    right: 19px;
   }
 
   .application-form__wrapper-button {

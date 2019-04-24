@@ -63,15 +63,15 @@
               <div class="application-form__wrapper application-form__wrapper--inner">
                 <ul class="application-form__list">
                   <li class="application-form__item">
-                    <input class="application-form__value" type="radio" name="purpose" id="slim" value="slim" checked>
+                    <input class="application-form__value visually-hidden" type="radio" name="purpose" id="slim" value="slim" checked>
                     <label class="application-form__key" for="slim">Похудение</label>
                   </li>
                   <li class="application-form__item">
-                    <input class="application-form__value" type="radio" name="purpose" id="pro" value="pro">
+                    <input class="application-form__value visually-hidden" type="radio" name="purpose" id="pro" value="pro">
                     <label class="application-form__key" for="pro">Набор массы</label>
                   </li>
                   <li class="application-form__item">
-                    <input class="application-form__value" type="radio" name="purpose" id="need-advice" value="need-advice">
+                    <input class="application-form__value visually-hidden" type="radio" name="purpose" id="need-advice" value="need-advice">
                     <label class="application-form__key" for="need-advice">Не знаю (нужен ваш совет)</label>
                   </li>
                 </ul>
@@ -83,13 +83,19 @@
           <legend class="title title--small application-form__title">Контактные данные (владельца кота)</legend>
           <div class="application-form__wrapper">
             <div class="application-form__inner">
-              <div class="application-form__item">
+              <div class="application-form__item application-form__item--icon">
                 <label class="application-form__key" for="e-mail">E-mail:*</label>
                 <input class="application-form__value" type="email" name="e-mail" id="e-mail" placeholder="kuklachev@gmail.com" required>
+                <svg class="application-form__icon" width="22" height="13">
+                  <use xlink:href="img/sprite.svg#icon-mail"></use>
+                </svg>
               </div>
-              <div class="application-form__item">
+              <div class="application-form__item application-form__item--icon">
                 <label class="application-form__key" for="phone">Телефон:*</label>
                 <input class="application-form__value" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
+                <svg class="application-form__icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                </svg>
               </div>
             </div>
           </div>
@@ -105,19 +111,19 @@
           <div class="application-form__wrapper">
             <ul class="application-form__list">
               <li class="application-form__item">
-                <input class="application-form__value" type="checkbox" name="additional" id="sweetener" value="sweetener" checked>
+                <input class="application-form__value visually-hidden" type="checkbox" name="additional" id="sweetener" value="sweetener" checked>
                 <label class="application-form__key" for="sweetener">Подсластитель</label>
               </li>
               <li class="application-form__item">
-                <input class="application-form__value" type="checkbox" name="additional" id="water" value="water">
+                <input class="application-form__value visually-hidden" type="checkbox" name="additional" id="water" value="water">
                 <label class="application-form__key" for="water">Питьевая вода</label>
               </li>
               <li class="application-form__item">
-                <input class="application-form__value" type="checkbox" name="additional" id="milk" value="milk">
+                <input class="application-form__value visually-hidden" type="checkbox" name="additional" id="milk" value="milk">
                 <label class="application-form__key" for="milk">Молоко</label>
               </li>
               <li class="application-form__item">
-                <input class="application-form__value" type="checkbox" name="additional" id="vitamins" value="vitamins">
+                <input class="application-form__value visually-hidden" type="checkbox" name="additional" id="vitamins" value="vitamins">
                 <label class="application-form__key" for="vitamins">Витамины</label>
               </li>
             </ul>
@@ -165,26 +171,37 @@
           </a>
           <ul class="social page-footer__social">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+              <a class="social__link" href="https://vk.com/htmlacademy">
                 Мы в Вконтакте
-                <img src="img/icon-vk.svg" width="22" height="16" alt="Мы Вконтакте">
+                <svg class="social__icon social__icon--vk" width="22" height="12">
+                  <use xlink:href="img/sprite.svg#icon-vk"></use>
+                </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
+              <a class="social__link" href="https://www.instagram.com/htmlacademy">
                 Мы в Инстаграме
-                <img src="img/icon-insta.svg" width="16" height="16" alt="Мы в инстаграме">
+                <svg class="social__icon social__icon--insta" width="16" height="16">
+                  <use xlink:href="img/sprite.svg#icon-insta"></use>
+                </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
+              <a class="social__link" href="https://www.facebook.com/htmlacademy">
                 Мы в Фейсбуке
-                <img src="img/icon-fb.svg" width="10" height="19" alt="Мы в фейсбуке">
+                <svg class="social__icon social__icon--fb" width="10" height="19">
+                  <use xlink:href="img/sprite.svg#icon-fb"></use>
+                </svg>
               </a>
             </li>
           </ul>
           <div class="page-footer__copyright">
-            <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+              HTML Academy
+              <svg width="34" height="34">
+                <use xlink:href="img/sprite.svg#htmlacademy"></use>
+              </svg>
+            </a>
           </div>
         </div>
       </div>

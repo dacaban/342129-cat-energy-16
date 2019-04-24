@@ -22,11 +22,35 @@
   display: block;
   font-size: 0;
   line-height: 0;
-  width: 22px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    fill: @baseBackground;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.social__link img {
+.social__icon {
   display: block;
+
+  &--vk {
+    width: 22px;
+    height: 12px;
+  }
+
+  &--insta {
+    width: 16px;
+    height: 16px;
+  }
+
+  &--fb {
+    width: 10px;
+    height: 19px;
+  }
 }
 
 @media (min-width: @tabletWidth) {
@@ -42,7 +66,20 @@
     margin-right: 0;
   }
 
-  .social__link {
-    width: 30px;
+  .social__icon {
+    &--vk {
+      width: 30px;
+      height: 16px;
+    }
+
+    &--insta {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--fb {
+      width: 14px;
+      height: 28px;
+    }
   }
 }
