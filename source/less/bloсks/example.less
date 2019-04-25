@@ -109,8 +109,18 @@
 .example__range-wrapper {
   .wrapper();
   text-align: center;
+}
+
+.example__button {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
   text-transform: uppercase;
   color: @titleColor;
+  font-family: @baseFont;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 @media (min-width: @tabletWidth) {
@@ -198,9 +208,19 @@
     height: 517px;
   }
 
-  .example__before,
-  .example__after {
+  .example__button {
+    padding-bottom: 7px;
     border-bottom: 1px dotted @additionalGoodsBorderColor;
+    font-size: 20px;
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid @buttonBorderColor;
+    }
+
+    &:active {
+      border-bottom: none;
+    }
   }
 }
 
