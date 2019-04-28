@@ -4,9 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Cat Energy</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=f5c65493-07e9-4c3e-af43-75ec80b0c0d1&lang=ru_RU" type="text/javascript"></script>
   </head>
   <body>
+  <div style="display: none;">
+    <include src="build/img/sprite.svg"></include>
+  </div>
     <header class="page-header page-header--index">
       <a class="logo page-header__logo" title="Перейти на главную">
         <picture>
@@ -15,7 +19,7 @@
           <img class="logo__icon" src="img/logo-mobile.svg" width="190" height="39" alt="Cat Energy">
         </picture>
       </a>
-      <nav class="main-menu main-menu--closed main-menu--nojs">
+      <nav class="main-menu main-menu--opened main-menu--nojs">
         <button class="main-menu__toggle" type="button">Открыть меню</button>
         <ul class="main-menu__list site-list site-list--index">
           <li class="site-list__item site-list__item--active">
@@ -132,7 +136,8 @@
             </div>
             <div class="example__demo">
               <div class="example__wrapper">
-                <picture>
+                <div class="example__image-wrapper example__image-wrapper--before example__image-wrapper--appearance">
+                  <picture>
                   <source type="image/webp"
                           media="(min-width: 1300px)"
                           srcset="img/before-desktop@1x.webp 1x,
@@ -150,12 +155,14 @@
                   <source media="(min-width: 768px"
                           srcset="img/before-tablet@1x.png 1x,
                           img/before-tablet@2x.png 2x">
-                  <img class="example__image example__image--before"
+                  <img class="example__image"
                         src="img/before-mobile@1x.png"
                         srcset="img/before-mobile@2x.png 2x"
                         alt="Толстый Борис">
                 </picture>
-                <picture>
+                </div>
+                <div class="example__image-wrapper example__image-wrapper--after">
+                  <picture>
                   <source type="image/webp"
                           media="(min-width: 1300px)"
                           srcset="img/after-desktop@1x.webp 1x,
@@ -173,15 +180,19 @@
                   <source media="(min-width: 768px"
                           srcset="img/after-tablet@1x.png 1x,
                           img/after-tablet@2x.png 2x">
-                  <img class="example__image example__image--after"
+                  <img class="example__image"
                         src="img/after-mobile@1x.png"
                         srcset="img/after-mobile@2x.png 2x"
                         alt="Худой Борис">
                 </picture>
+                </div>
               </div>
               <div class="example__range-wrapper">
                 <button class="example__button example__button--before" type="button">Было</button>
-                <input class="example__range" type="range">
+                <input class="example__range-value" type="number" name="effect-level" value="50">
+                <div class="example__line">
+                  <div class="example__pin" tabindex="0"></div>
+                </div>
                 <button class="example__button example__button--after" type="button">Стало</button>
               </div>
             </div>
@@ -201,7 +212,7 @@
         </div>
         </div>
         <div class="contacts__map">
-<!--          Здесь будет фрейм-->
+          <div class="contacts__yandex-map contacts__yandex-map--nojs" id="map"></div>
           <div class="contacts__static-map">
             <picture>
               <source type="image/webp"
@@ -238,7 +249,7 @@
               <a class="social__link" href="https://vk.com/htmlacademy">
                 Мы в Вконтакте
                 <svg class="social__icon social__icon--vk" width="22" height="12">
-                  <use xlink:href="img/sprite.svg#icon-vk"></use>
+                  <use xlink:href="#icon-vk"></use>
                 </svg>
               </a>
             </li>
@@ -246,7 +257,7 @@
               <a class="social__link" href="https://www.instagram.com/htmlacademy">
                 Мы в Инстаграме
                 <svg class="social__icon social__icon--insta" width="16" height="16">
-                  <use xlink:href="img/sprite.svg#icon-insta"></use>
+                  <use xlink:href="#icon-insta"></use>
                 </svg>
               </a>
             </li>
@@ -254,7 +265,7 @@
               <a class="social__link" href="https://www.facebook.com/htmlacademy">
                 Мы в Фейсбуке
                 <svg class="social__icon social__icon--fb" width="10" height="19">
-                  <use xlink:href="img/sprite.svg#icon-fb"></use>
+                  <use xlink:href="#icon-fb"></use>
                 </svg>
               </a>
             </li>
@@ -263,7 +274,7 @@
             <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
               HTML Academy
               <svg width="34" height="34">
-                <use xlink:href="img/sprite.svg#htmlacademy"></use>
+                <use xlink:href="#icon-htmlacademy"></use>
               </svg>
             </a>
           </div>
@@ -271,6 +282,6 @@
       </div>
     </footer>
 
-  <script src="js/main-menu.js"></script>
+  <script src="js/script.min.js"></script>
   </body>
 </html>
