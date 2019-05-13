@@ -168,6 +168,7 @@
   height: 6px;
   background-color: @baseBackground;
   border-radius: 3px;
+  pointer-events: none;
 
   &--before {
     right: auto;
@@ -261,7 +262,7 @@
 
   .example__demo {
     position: relative;
-    background-color: @contentBackground;
+    background-image: linear-gradient(to right, @contentBackground 50%, @sliderBackground 50%);
     padding-top: 365px;
     padding-bottom: 65px;
   }
@@ -305,6 +306,7 @@
     border-radius: 50%;
     border: 12px solid @textOnBackgroundColor;
     box-shadow: 0 0 0 1px @additionalGoodsBorderColor, 0 2px 5px 0 @pinShadow;
+    pointer-events: auto;
 
     &--before {
       right: auto;
@@ -339,7 +341,7 @@
   }
 
   .example__container {
-    background-color: @contentBackground;
+    background-image: linear-gradient(to right, @contentBackground 70.65%, @sliderBackground 70.65%);
   }
 
   .example__inner {
@@ -373,6 +375,7 @@
 
   .example__demo {
     width: 54%;
+    background-image: none;
   }
 
   .example__item {
