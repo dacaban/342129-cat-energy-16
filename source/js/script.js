@@ -40,6 +40,8 @@
     }
     var PIN_WIDTH = 33;
     var IMAGE_MIN_WIDTH = 131;
+    var TABLET_WIDTH = 768;
+    var DESKTOP_WIDTH = 1300;
     var exampleWrapperDesc = document.querySelector('.example__container');
     var exampleWrapperTab = document.querySelector('.example__demo');
     var beforeBtn = exampleWrapperTab.querySelector('.example__button--before');
@@ -47,6 +49,15 @@
     var beforeImg = exampleWrapperTab.querySelector('.example__image-wrapper--before');
     var pin = exampleWrapperTab.querySelector('.example__pin');
     var line = exampleWrapperTab.querySelector('.example__line');
+    var setBackground = function () {
+      if (window.innerWidth>=TABLET_WIDTH && window.innerWidth<DESKTOP_WIDTH) {
+        exampleWrapperTab.style.backgroundImage = "linear-gradient(to right, #f2f2f2 " + (pin.getBoundingClientRect().left + PIN_WIDTH/2) + "px, #eaeaea " + (pin.getBoundingClientRect().left + PIN_WIDTH/2) + "px)";
+      }
+      if (window.innerWidth>=DESKTOP_WIDTH) {
+        exampleWrapperDesc.style.backgroundImage = "linear-gradient(to right, #f2f2f2 " + (pin.getBoundingClientRect().left + PIN_WIDTH/2) + "px, #eaeaea " + (pin.getBoundingClientRect().left + PIN_WIDTH/2) + "px)";
+      }
+    };
+    setBackground();
     beforeBtn.addEventListener('click', function () {
       beforeImg.classList.remove('example__image-wrapper--disappearance');
       beforeImg.classList.add('example__image-wrapper--appearance');
@@ -54,6 +65,7 @@
       pin.classList.remove('example__pin--after');
       pin.classList.add("example__pin--before");
       beforeImg.style.width = '100%';
+      setBackground();
     });
     afterBtn.addEventListener('click', function () {
       beforeImg.classList.remove('example__image-wrapper--appearance');
@@ -62,6 +74,7 @@
       pin.classList.remove('example__pin--before');
       pin.classList.add("example__pin--after");
       beforeImg.style.width = '0';
+      setBackground();
     });
     var isCursorOnLeft = function (cursorPosition, min) {
       return (cursorPosition < min);
@@ -81,10 +94,6 @@
     var setCoord = function (position, shift) {
       return getValueInLimit(position, pin.offsetLeft - shift, PIN_WIDTH/2, line.offsetWidth - PIN_WIDTH/2);
     };
-    var setBackground = function (elem, position) {
-      elem.style.backgroundImage = "linear-gradient(to right, #f2f2f2 " + position + "px, #eaeaea " + position + "px)"
-
-    };
     pin.addEventListener('touchstart', function (evt) {
       var startCoordX = evt.changedTouches[0].clientX;
       var onMouseMove = function (moveEvt) {
@@ -97,7 +106,7 @@
           var newCoord = setCoord(moveEvt.changedTouches[0].clientX, shift);
           pin.style.left = newCoord + 'px';
           beforeImg.style.width = (IMAGE_MIN_WIDTH + newCoord) + 'px';
-          setBackground(exampleWrapperTab, pin.getBoundingClientRect().left + PIN_WIDTH/2);
+          setBackground();
         }
       };
       var onMouseUp = function () {
@@ -120,8 +129,8 @@
           startCoordX = moveEvt.clientX;
           var newCoord = setCoord(moveEvt.clientX, shift);
           pin.style.left = newCoord + 'px';
-          beforeImg.style.width = (IMAGE_MIN_WIDTH + newCoord) + 'px';
-          setBackground(exampleWrapperDesc, pin.getBoundingClientRect().left + PIN_WIDTH/2);
+          beforeImg.style.width = (IMAGE_MIN_WIDTH + newCoord + PIN_WIDTH/2) + 'px';
+          setBackground();
         }
       };
       var onMouseUp = function (upEvt) {

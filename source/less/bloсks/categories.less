@@ -11,15 +11,15 @@
 
 .categories__item {
   position: relative;
-  padding: 36px 20px 20px;
-  margin: 20px 0;
+  padding: 32px 20px 20px;
+  margin: 20px 0 15px;
   background-color: @contentBackground;
 
   &::before {
     content: "";
     position: absolute;
-    left: 20px;
-    top: 20px;
+    left: 23px;
+    top: 24px;
     width: 50px;
     height: 50px;
     background-color: @baseBackground;
@@ -30,8 +30,8 @@
 .categories__item--slim::after {
   content: "";
   position: absolute;
-  left: 21px;
-  top: 18px;
+  left: 22px;
+  top: 23px;
   width: 49px;
   height: 49px;
   background-image: url("../img/icon-cat-slim.svg");
@@ -42,8 +42,8 @@
 .categories__item--pro::after {
   content: "";
   position: absolute;
-  left: 10px;
-  top: 12px;
+  left: 12px;
+  top: 13px;
   width: 67px;
   height: 67px;
   background-image: url("../img/icon-cat-pro.svg");
@@ -65,7 +65,7 @@
   font-family: @textFont;
   font-size: @textFontSize;
   line-height: @textLineHeight;
-  margin: 21px 0 41px;
+  margin: 28px 0 41px;
 }
 
 .categories__link {
@@ -107,14 +107,19 @@
 
 @media (min-width: @tabletWidth) {
   .categories__list {
-    padding-bottom: 34px;
+    padding-bottom: 15px;
   }
 
   .categories__item {
-    padding: 80px 280px 63px 52px;
+    padding: 76px 280px 60px 52px;
+    margin: 0 0 30px;
+
+    &--pro {
+      padding-right: 312px;
+    }
 
     &::before {
-      right: 60px;
+      right: 62px;
       left: auto;
       top: 92px;
       width: 200px;
@@ -144,7 +149,7 @@
   }
 
   .categories__description {
-    margin: 27px 0 61px;
+    margin: 25px 0 56px;
     font-size: 16px;
     line-height: 24px;
   }
@@ -152,20 +157,25 @@
   .categories__link {
     font-size: 20px;
     line-height: 20px;
+    padding-right: 48px;
   }
 }
 
 @media (min-width: @desktopWidth) {
+  .categories {
+    margin-top: 30px;
+  }
+
   .categories__list {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 64px;
+    padding-bottom: 43px;
   }
 
   .categories__item {
     box-sizing: border-box;
     width: 46.72%;
-    padding: 80px 52px 63px;
+    padding: 75px 52px 60px;
 
     &::before {
       right: auto;
@@ -197,6 +207,6 @@
   }
 
   .categories__description {
-    margin: 75px 0 36px;
+    margin: 75px 0 30px;
   }
 }

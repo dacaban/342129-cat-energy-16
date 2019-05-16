@@ -4,7 +4,21 @@
 }
 
 .additional-goods__title {
-  margin-bottom: 35px;
+  position: relative;
+  margin-bottom: 33px;
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 24px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 100vw;
+    height: 3px;
+    background-color: @baseBackground;
+  }
 }
 
 .additional-goods__list {
@@ -15,7 +29,7 @@
 
 .additional-goods__item {
   border-bottom: solid 1px @additionalGoodsBorderColor;
-  padding: 17px 0;
+  padding: 11px 0 17px;
 }
 
 .additional-goods__item:first-child {
@@ -23,7 +37,7 @@
 }
 
 .additional-goods__info {
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .additional-goods__name {
@@ -31,7 +45,7 @@
   font-size: 16px;
   color: @additionalGoodsColor;
   text-transform: uppercase;
-  margin: 0 0 10px;
+  margin: 0 0 8px;
 }
 
 .additional-goods__detail {
@@ -39,10 +53,22 @@
   font-size: @textFontSize;
   line-height: 14px;
   color: @baseTextColor;
+  width: 100%;
+}
+
+.additional-goods__detail td {
+  padding: 0;
 }
 
 .additional-goods__price {
   text-transform: uppercase;
+  text-align: right;
+}
+
+.additional-goods__button {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px;
 }
 
 .additional-goods__promo {
@@ -81,36 +107,32 @@
 }
 
 .additional-goods__promo-text {
-  width: 160px;
+  width: 161px;
   margin-bottom: 43px;
 }
 
 @media (min-width: @tabletWidth) {
   .additional-goods {
-    margin-bottom: 76px;
+    margin-bottom: 40px;
   }
 
   .additional-goods__title {
-    position: relative;
     padding: 0 38px;
-    display: inline-block;
+    margin-bottom: 81px;
 
-    &::before,
-    &::after {
+    &::before {
       content: "";
       position: absolute;
-      top: 50%;
+      top: 23px;
+      right: 100%;
       width: 100vw;
       height: 3px;
       background-color: @baseBackground;
     }
 
-    &::before {
-      right: 100%;
-    }
 
     &::after {
-      left: 100%;
+      top: 23px;
     }
   }
 
@@ -121,11 +143,11 @@
   .additional-goods__item {
     border-left: solid 1px @additionalGoodsBorderColor;
     border-right: solid 1px @additionalGoodsBorderColor;
-    padding: 24px 37px;
+    padding: 25px 37px 27px;
   }
 
   .additional-goods__info {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     display: flex;
     justify-content: space-between;
   }
@@ -137,15 +159,11 @@
   .additional-goods__detail {
     font-size: 16px;
     line-height: 20px;
+    width: auto;
   }
 
-  .additional-goods__volume,
-  .additional-goods__price {
-    padding: 0;
-  }
-
-  .additional-goods__volume {
-    padding-right: 52px;
+  td.additional-goods__volume {
+    padding-right: 46px;
   }
 
   .additional-goods__button {
@@ -174,7 +192,7 @@
 
   .additional-goods__promo-text {
     margin-bottom: 0;
-    margin-right: 110px;
+    margin-right: 123px;
   }
 }
 
@@ -188,7 +206,8 @@
   }
 
   .additional-goods__title {
-    margin-bottom: 80px;
+    margin-bottom: 81px;
+    margin-left: -40px;
   }
 
 
@@ -200,7 +219,7 @@
   .additional-goods__item {
     border-left: none;
     border-right: none;
-    padding: 16px 0;
+    padding: 16px 0 15px;
     display: flex;
     justify-content: space-between;
   }
@@ -218,6 +237,10 @@
 
   .additional-goods__detail {
     width: 46.72%;
+  }
+
+  .additional-goods__detail td {
+    padding-top: 5px;
   }
 
   .additional-goods__volume {
@@ -250,6 +273,6 @@
 
   .additional-goods__promo-text {
     margin-right: 0;
-    margin-bottom: 45px;
+    margin-bottom: 42px;
   }
 }

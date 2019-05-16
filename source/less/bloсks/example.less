@@ -11,11 +11,12 @@
 
 .example__title {
   .wrapper();
-  margin-bottom: 10px;
+  margin-bottom: 24px;
 }
 
 .example__history {
   .wrapper();
+  padding-right: 21px;
   font-family: @textFont;
   font-size: @textFontSize;
   line-height: @textLineHeight;
@@ -23,7 +24,7 @@
 
 .example__list {
   list-style: none;
-  padding: 6px 0 0;
+  padding: 5px 0 0;
   .wrapper();
   margin-bottom: 35px;
   display: flex;
@@ -33,8 +34,8 @@
 
 .example__item {
   position: relative;
-  width: 44.3%;
-  padding: 15px 0;
+  width: 44%;
+  padding: 13px 0 17px;
   border: solid @borderColor 1px;
   border-radius: 3px;
   margin: 19px 0;
@@ -42,6 +43,7 @@
 
   &--cost {
     margin-bottom: 0;
+    margin-top: 14px;
     padding: 0;
     border: none;
     width: 100%;
@@ -96,7 +98,7 @@
   display: flex;
   width: 320px;
   text-align: center;
-  margin: 0 auto 25px;
+  margin: 0 auto 28px;
 }
 
 .example__image-wrapper {
@@ -140,6 +142,7 @@
   justify-content: space-between;
   position: relative;
   width: 200px;
+  padding-left: 5px;
 }
 
 .example__range-value {
@@ -195,7 +198,7 @@
 
 @media (min-width: @tabletWidth) {
   .example {
-    padding-top: 50px;
+    padding-top: 43px;
     background-color: transparent;
   }
 
@@ -204,23 +207,26 @@
   }
 
   .example__title {
-    margin-bottom: 60px;
+    margin-bottom: 64px;
   }
 
   .example__history {
     font-size: 16px;
     line-height: 24px;
+    padding-right: 36px;
   }
 
   .example__list {
     margin-bottom: 236px;
-    padding-top: 33px;
+    padding-top: 34px;
     display: flex;
   }
 
   .example__item {
     margin-right: 42px;
     width: 22.9%;
+    padding: 14px 0 19px;
+    box-sizing: border-box;
 
     &--cost {
       margin-right: 0;
@@ -237,6 +243,7 @@
     &--cost {
       font-size: 20px;
       line-height: 20px;
+      margin-top: 10px;
     }
   }
 
@@ -262,9 +269,10 @@
 
   .example__demo {
     position: relative;
-    background-image: linear-gradient(to right, @contentBackground 50%, @sliderBackground 50%);
+    //background-image: linear-gradient(to right, @contentBackground 50%, @sliderBackground 50%);
+    background-color: @contentBackground;
     padding-top: 365px;
-    padding-bottom: 65px;
+    padding-bottom: 69px;
   }
 
   .example__wrapper {
@@ -283,6 +291,7 @@
   }
 
   .example__range-wrapper {
+    padding-left: 0;
     width: 570px;
   }
 
@@ -338,10 +347,12 @@
 @media (min-width: @desktopWidth) {
   .example {
     padding-bottom: 0;
+    padding-top: 25px;
   }
 
   .example__container {
-    background-image: linear-gradient(to right, @contentBackground 70.65%, @sliderBackground 70.65%);
+    //background-image: linear-gradient(to right, @contentBackground 75%, @sliderBackground 75%);
+    background-color: @contentBackground;
   }
 
   .example__inner {
@@ -352,50 +363,68 @@
   .example__title {
     box-sizing: border-box;
     width: 100%;
+    margin-bottom: 73px;
   }
 
   .example__content {
-    padding: 72px 0;
     width: 46%;
+    padding: 72px 0 55px;
   }
 
   .example__history {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    width: 83.6%;
+    width: 78%;
   }
 
   .example__list {
     padding: 48px 0 0;
     margin: 0;
     box-sizing: border-box;
-    width: 83.6%;
+    width: 78%;
+    justify-content: flex-start;
   }
 
   .example__demo {
     width: 54%;
     background-image: none;
+    background-color: transparent;
   }
 
   .example__item {
-    width: 38.1%;
+    width: 37%;
+    margin-right: 41px;
   }
 
   .example__item--cost {
-    width: 77.38%;
+    width: 75%;
     margin-left: 0;
-    margin-top: 43px;
+    margin-top: 29px;
     display: flex;
     justify-content: space-between;
+  }
+
+  .example__value--cost {
+    margin-top: 0;
   }
 
   .example__name:not(.example__name--cost) {
     background-color: @contentBackground;
   }
 
+  .example__wrapper {
+    top: -190px;
+    left: 54%;
+  }
+
+  .example__image-wrapper--before {
+    width: 52.5%;
+  }
+
   .example__range-wrapper {
     padding: 0;
+    margin-right: 0;
   }
 }
 
