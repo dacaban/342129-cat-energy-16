@@ -22,7 +22,7 @@
 .application-form__section {
   position: relative;
   margin: 0;
-  padding: 20px 0 0;
+  padding: 19px 0 0;
   border: none;
 
   &--cats-data {
@@ -177,6 +177,7 @@
   width: 100%;
   min-height: 150px;
   padding-right: 12px;
+  margin-top: 12px;
 }
 
 .application-form__list {
@@ -185,19 +186,23 @@
   list-style: none;
 }
 
+.application-form__section--extra .application-form__list {
+  margin-top: 13px;
+}
+
 .application-form__title {
   max-width: 181px;
   padding-right: 22px;
   padding-left: 20px;
   position: absolute;
-  top: 32px;
+  top: 27px;
   left: 0;
 
   &::before,
   &::after {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 14px;
     width: 100vw;
     height: 3px;
     background-color: @baseBackground;
@@ -213,8 +218,11 @@
 }
 
 .application-form__button {
-  margin: 34px 0 22px;
+  margin: 34px 0 21px;
   width: 100%;
+  font-size: 16px;
+  line-height: 20px;
+  padding-bottom: 8px;
 }
 
 .application-form__legend {
@@ -227,7 +235,7 @@
 
 @media (min-width: @tabletWidth) {
   .application-form {
-    margin-top: 36px;
+    margin-top: 31px;
     margin-bottom: 72px;
   }
 
@@ -290,7 +298,7 @@
 
   .application-form__section--purpose .application-form__key,
   .application-form__section--extra .application-form__key {
-    padding: 10px 0 10px 60px;
+    padding: 10px 0 10px 59px;
     position: relative;
 
     &::before {
@@ -332,23 +340,35 @@
 
   .application-form__title {
     max-width: 512px;
-    padding: 0 43px;
-    top: 69px;
-    left: 30px;
+    padding: 0 42px;
+    top: 65px;
+    left: 27px;
   }
 
   .application-form__section--contacts .application-form__title {
-    top: 79px;
+    top: 75px;
+  }
+
+  .application-form__title::after,
+  .application-form__title::before {
+    top: 22px;
+  }
+
+  .application-form__section--comments .application-form__value {
+    margin-top: 0;
+    padding-top: 14px;
+    min-height: 174px;
   }
 
   .application-form__section--extra .application-form__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 0;
   }
 
   .application-form__section--extra .application-form__item {
-    width: 45.3%;
+    width: 45.6%;
     margin-bottom: 32px;
   }
 
@@ -361,16 +381,23 @@
 
   .application-form__button {
     margin: 0;
-    width: 45.3%;
+    width: 45%;
+    font-size: 20px;
+    padding-bottom: 15px;
   }
 
   .application-form__legend {
     width: 45.3%;
     text-align: left;
+    font-size: 16px;
   }
 }
 
 @media (min-width: @desktopWidth) {
+  .application-form {
+    margin-bottom: 84px;
+  }
+
   .application-form__wrapper {
     padding: 0 40px;
 
@@ -381,6 +408,7 @@
 
   .application-form__tooltip {
     width: 26.6%;
+    margin-bottom: 65px;
   }
 
   .application-form__inner {
@@ -401,7 +429,7 @@
     }
 
     &--purpose {
-      padding: 30px 28px 0;
+      padding: 23px 28px 0;
       box-sizing: border-box;
       width: 46.73%;
       margin: 0;
@@ -434,6 +462,10 @@
     padding: 0 43px 0 40px;
   }
 
+  .application-form__section--contacts .application-form__title {
+    top: 69px;
+  }
+
   .application-form__section--contacts .application-form__item {
     width: 46.73%;
     margin: 0;
@@ -443,8 +475,13 @@
     width: 20.1%;
   }
 
+  .application-form__wrapper-button {
+    margin-top: 30px;
+  }
+
   .application-form__button {
     width: 46.73%;
+    padding: 14px 0 16px;
   }
 
   .application-form__legend {
