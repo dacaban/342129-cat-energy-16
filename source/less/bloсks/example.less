@@ -328,6 +328,15 @@
       right: -16px;
       left: auto;
     }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 1px @additionalGoodsBorderColor, 0 3px 5px 0 @pinShadowHvr;
+    }
+
+    &:active {
+      box-shadow: 0 0 0 2px @baseBackground, 0 4px 5px 0 @pinShadowActive;
+    }
   }
 
   .example__button {
