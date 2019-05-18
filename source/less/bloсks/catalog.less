@@ -10,13 +10,13 @@
 
 .catalog__item {
   .wrapper();
-  position: relative;
   padding-bottom: 24px;
   border-bottom: solid 1px @contentBorderColor;
 
   &--all-products {
     padding-top: 80px;
     text-align: center;
+    position: relative;
 
     &::before {
       content: "";
@@ -116,7 +116,7 @@
 
   .catalog__item {
     width: 45.76%;
-    padding: 163px 38px 40px;
+    padding: 126px 38px 40px;
     background-color: @contentBackground;
     border: none;
     margin: 140px 0 0;
@@ -132,6 +132,7 @@
       border: 1px solid @menuBorderColor;
       display: flex;
       flex-direction: column;
+      padding-top: 164px;
 
       &::before {
         width: 60px;
@@ -143,9 +144,16 @@
     }
   }
 
+  .catalog__card {
+    position: relative;
+    padding-top: 37px;
+  }
+
   .catalog__image {
-    .position-center();
-    bottom: 305px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -100%);
     width: 324px;
     height: auto;
   }
