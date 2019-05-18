@@ -4,8 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Каталог</title>
+    <link rel="preload" href="fonts/oswaldregular.woff" as="font">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldmedium.woff" as="font">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
     <link href="css/style.min.css" rel="stylesheet">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=f5c65493-07e9-4c3e-af43-75ec80b0c0d1&lang=ru_RU" type="text/javascript"></script>
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.js" async></script>
   </head>
   <body>
   <div style="display: none;">
@@ -14,9 +22,15 @@
     <header class="page-header">
       <a class="logo page-header__logo" href="index.html" title="Перейти на главную">
         <picture>
-          <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img class="logo__icon" src="img/logo-mobile.svg" width="190" height="39" alt="Cat Energy">
+          <source media="(min-width: 1300px)"
+                  srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)"
+                  srcset="img/logo-tablet.svg">
+          <img class="logo__icon"
+                src="img/logo-mobile.svg"
+                width="190"
+                height="39"
+                alt="Cat Energy">
         </picture>
       </a>
       <nav class="main-menu main-menu--opened main-menu--nojs">
@@ -40,7 +54,7 @@
         <ul class="catalog__list">
           <li class="catalog__item">
             <div class="catalog__card">
-              <a class="catalog__image" title="Подробнее" href="any-other-page.html">
+              <a class="catalog__image" title="Подробнее" href="#">
                 <picture>
                   <source type="image/webp"
                           media="(min-width: 1300px)"
@@ -65,7 +79,7 @@
                 </picture>
               </a>
               <div class="catalog__info">
-                <a class="catalog__link" title="Подробнее" href="any-other-page.html">
+                <a class="catalog__link" title="Подробнее" href="#">
                   <h3 class="catalog__title">Cat energy pro 500 г</h3>
                 </a>
                 <table class="catalog__detail">
@@ -84,11 +98,11 @@
                 </table>
               </div>
             </div>
-            <a class="button catalog__button" href="any-other-page.html" title="Заказать">Заказать</a>
+            <a class="button catalog__button" href="#" title="Заказать">Заказать</a>
           </li>
           <li class="catalog__item">
             <div class="catalog__card">
-              <a class="catalog__image" title="Подробнее" href="any-other-page.html">
+              <a class="catalog__image" title="Подробнее" href="#">
                 <picture>
                   <source type="image/webp"
                           media="(min-width: 1300px)"
@@ -113,7 +127,7 @@
                 </picture>
               </a>
               <div class="catalog__info">
-                <a class="catalog__link" title="Подробнее" href="any-other-page.html">
+                <a class="catalog__link" title="Подробнее" href="#">
                   <h3 class="catalog__title">Cat energy pro 1000 г</h3>
                 </a>
                 <table class="catalog__detail">
@@ -132,11 +146,11 @@
                 </table>
               </div>
             </div>
-            <a class="button catalog__button" href="any-other-page.html" title="Заказать">Заказать</a>
+            <a class="button catalog__button" href="#" title="Заказать">Заказать</a>
           </li>
           <li class="catalog__item">
             <div class="catalog__card">
-              <a class="catalog__image" title="Подробнее" href="any-other-page.html">
+              <a class="catalog__image" title="Подробнее" href="#">
                 <picture>
                   <source type="image/webp"
                           media="(min-width: 1300px)"
@@ -161,7 +175,7 @@
                 </picture>
               </a>
               <div class="catalog__info">
-                <a class="catalog__link" title="Подробнее" href="any-other-page.html">
+                <a class="catalog__link" title="Подробнее" href="#">
                   <h3 class="catalog__title">Cat energy pro 500 г</h3>
                 </a>
                 <table class="catalog__detail">
@@ -180,11 +194,11 @@
                 </table>
               </div>
             </div>
-            <a class="button catalog__button" href="any-other-page.html" title="Заказать">Заказать</a>
+            <a class="button catalog__button" href="#" title="Заказать">Заказать</a>
           </li>
           <li class="catalog__item">
             <div class="catalog__card">
-              <a class="catalog__image" title="Подробнее" href="any-other-page.html">
+              <a class="catalog__image" title="Подробнее" href="#">
                 <picture>
                   <source type="image/webp"
                           media="(min-width: 1300px)"
@@ -209,7 +223,7 @@
                 </picture>
               </a>
               <div class="catalog__info">
-                <a class="catalog__link" title="Подробнее" href="any-other-page.html">
+                <a class="catalog__link" title="Подробнее" href="#">
                   <h3 class="catalog__title">Cat energy pro 1000 г</h3>
                 </a>
                 <table class="catalog__detail">
@@ -228,11 +242,11 @@
                 </table>
               </div>
             </div>
-            <a class="button catalog__button" href="any-other-page.html" title="Заказать">Заказать</a>
+            <a class="button catalog__button" href="#" title="Заказать">Заказать</a>
           </li>
           <li class="catalog__item">
             <div class="catalog__card">
-              <a class="catalog__image" title="Подробнее" href="any-other-page.html">
+              <a class="catalog__image" title="Подробнее" href="#">
                 <picture>
                   <source type="image/webp"
                           media="(min-width: 1300px)"
@@ -257,7 +271,7 @@
                 </picture>
               </a>
               <div class="catalog__info">
-                <a class="catalog__link" title="Подробнее" href="any-other-page.html">
+                <a class="catalog__link" title="Подробнее" href="#">
                   <h3 class="catalog__title">Cat energy slim 500 г</h3>
                 </a>
                 <table class="catalog__detail">
@@ -276,11 +290,11 @@
                 </table>
               </div>
             </div>
-            <a class="button catalog__button" href="any-other-page.html" title="Заказать">Заказать</a>
+            <a class="button catalog__button" href="#" title="Заказать">Заказать</a>
           </li>
           <li class="catalog__item">
             <div class="catalog__card">
-              <a class="catalog__image" title="Подробнее" href="any-other-page.html">
+              <a class="catalog__image" title="Подробнее" href="#">
                 <picture>
                   <source type="image/webp"
                           media="(min-width: 1300px)"
@@ -305,7 +319,7 @@
                 </picture>
               </a>
               <div class="catalog__info">
-                <a class="catalog__link" title="Подробнее" href="any-other-page.html">
+                <a class="catalog__link" title="Подробнее" href="#">
                   <h3 class="catalog__title">Cat energy slim 1000 г</h3>
                 </a>
                 <table class="catalog__detail">
@@ -324,11 +338,11 @@
                 </table>
               </div>
             </div>
-            <a class="button catalog__button" href="any-other-page.html" title="Заказать">Заказать</a>
+            <a class="button catalog__button" href="#" title="Заказать">Заказать</a>
           </li>
           <li class="catalog__item">
             <div class="catalog__card">
-              <a class="catalog__image" title="Подробнее" href="any-other-page.html">
+              <a class="catalog__image" title="Подробнее" href="#">
                 <picture>
                   <source type="image/webp"
                           media="(min-width: 1300px)"
@@ -353,7 +367,7 @@
                 </picture>
               </a>
               <div class="catalog__info">
-                <a class="catalog__link" title="Подробнее" href="any-other-page.html">
+                <a class="catalog__link" title="Подробнее" href="#">
                   <h3 class="catalog__title">Cat energy slim 500 г</h3>
                 </a>
                 <table class="catalog__detail">
@@ -372,12 +386,12 @@
                 </table>
               </div>
             </div>
-            <a class="button catalog__button" href="any-other-page.html" title="Заказать">Заказать</a>
+            <a class="button catalog__button" href="#" title="Заказать">Заказать</a>
           </li>
           <li class="catalog__item catalog__item--all-products">
             <h3 class="catalog__title">Показать еще 100500 товаров</h3>
             <p class="catalog__text">На самом деле вкусов гораздо больше!</p>
-            <a class="button button--gray catalog__button" href="any-other-page.html" title="Показать все">Показать все</a>
+            <a class="button button--gray catalog__button" href="#" title="Показать все">Показать все</a>
           </li>
         </ul>
       </section>
@@ -394,7 +408,7 @@
                 </tr>
               </table>
             </div>
-            <a class="button additional-goods__button" href="any-other-page.html" title="Заказать">Заказать</a>
+            <a class="button additional-goods__button" href="#" title="Заказать">Заказать</a>
           </li>
           <li class="additional-goods__item">
             <div class="additional-goods__info">
@@ -406,7 +420,7 @@
                 </tr>
               </table>
             </div>
-            <a class="button additional-goods__button" href="any-other-page.html" title="Заказать">Заказать</a>
+            <a class="button additional-goods__button" href="#" title="Заказать">Заказать</a>
           </li>
           <li class="additional-goods__item">
             <div class="additional-goods__info">
@@ -418,7 +432,7 @@
                 </tr>
               </table>
             </div>
-            <a class="button additional-goods__button" href="any-other-page.html" title="Заказать">Заказать</a>
+            <a class="button additional-goods__button" href="#" title="Заказать">Заказать</a>
           </li>
           <li class="additional-goods__item">
             <div class="additional-goods__info">
@@ -430,7 +444,7 @@
                 </tr>
               </table>
             </div>
-            <a class="button additional-goods__button" href="any-other-page.html" title="Заказать">Заказать</a>
+            <a class="button additional-goods__button" href="#" title="Заказать">Заказать</a>
           </li>
         </ul>
         <p class="additional-goods__promo">
@@ -482,7 +496,11 @@
       <div class="page-footer__background">
         <div class="page-footer__inner">
           <a class="logo page-footer__logo" href="index.html" title="Перейти на главную">
-            <img class="logo__title" src="img/logo-footer.svg" width="128" height="26" alt="Cat Energy">
+            <img class="logo__title"
+                  src="img/logo-footer.svg"
+                  width="128"
+                  height="26"
+                  alt="Cat Energy">
           </a>
           <ul class="social page-footer__social">
             <li class="social__item">
@@ -523,6 +541,5 @@
     </footer>
 
     <script src="js/script.js"></script>
-    <script src="js/fitie.js"></script>
   </body>
 </html>
