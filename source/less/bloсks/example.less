@@ -125,15 +125,17 @@
   max-width: none;
   width: 100%;
   height: 240px;
-  object-fit: none;
+  object-fit: cover;
 }
 
 .example__image-wrapper--before .example__image {
-  object-position: left top;
+  object-position: left;
+  font-family: "object-fit: cover; object-position: left;", sans-serif;
 }
 
 .example__image-wrapper--after .example__image {
-  object-position: right top;
+  object-position: right;
+  font-family: "object-fit: cover; object-position: right;", sans-serif;
 }
 
 .example__range-wrapper {
@@ -351,7 +353,6 @@
   }
 
   .example__container {
-    //background-image: linear-gradient(to right, @contentBackground 75%, @sliderBackground 75%);
     background-color: @contentBackground;
   }
 

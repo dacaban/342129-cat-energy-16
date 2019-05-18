@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Cat Energy</title>
+    <link rel="preload" href="fonts/oswaldregular.woff" as="font">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldmedium.woff" as="font">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
     <link href="css/style.min.css" rel="stylesheet">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=f5c65493-07e9-4c3e-af43-75ec80b0c0d1&lang=ru_RU" type="text/javascript"></script>
     <script>
@@ -162,8 +166,7 @@
                   <img class="example__image"
                         src="img/before-mobile@1x.png"
                         srcset="img/before-mobile@2x.png 2x"
-                        alt="Толстый Борис"
-                        data-object-fit="none">
+                        alt="Толстый Борис">
                 </picture>
                 </div>
                 <div class="example__image-wrapper example__image-wrapper--after">
@@ -188,8 +191,7 @@
                   <img class="example__image"
                         src="img/after-mobile@1x.png"
                         srcset="img/after-mobile@2x.png 2x"
-                        alt="Худой Борис"
-                        data-object-fit="none">
+                        alt="Худой Борис">
                 </picture>
                 </div>
               </div>
@@ -239,8 +241,7 @@
                       img/bg-map-tablet@2x.png 2x">
               <img src="img/bg-map-mobile@1x.png"
                     srcset="img/bg-map-mobile@2x.png"
-                    alt="Как к нам добраться"
-                    data-object-fit="cover">
+                    alt="Как к нам добраться">
             </picture>
           </div>
         </div>
@@ -289,5 +290,9 @@
     </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/ofi.js"></script>
+  <script>
+    objectFitImages('.example__image');
+  </script>
   </body>
 </html>

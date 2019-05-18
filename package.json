@@ -50,7 +50,6 @@
     "node": "8.15"
   },
   "dependencies": {
-    "node": "^10.15.3",
-    "object-fit": "^0.4.3"
+    "node": "^10.15.3"
   }
 }
